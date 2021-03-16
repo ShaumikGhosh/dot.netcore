@@ -14,6 +14,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using TelephoneApp.Data;
 using TelephoneApp.Middlwares;
+using TelephoneApp.Models;
 
 namespace TelephoneApp
 {
@@ -35,8 +36,8 @@ namespace TelephoneApp
             services.AddDatabaseDeveloperPageExceptionFilter();
 
             services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
+                .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationContext>();
-            services.AddControllersWithViews();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

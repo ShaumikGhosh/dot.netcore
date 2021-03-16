@@ -14,7 +14,6 @@ using TelephoneApp.Models;
 
 namespace TelephoneApp.Controllers
 {
-    // Shaumik Ghosh (Coding with C# ASP.NET Core MVC5)
     public class HomeController : Controller
     {
 
