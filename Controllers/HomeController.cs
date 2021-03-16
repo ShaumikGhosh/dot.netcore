@@ -69,6 +69,7 @@ namespace TelephoneApp.Controllers
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             var user = _applicationContext.ApplicationUser.Find(userId);
+
             if (ModelState.IsValid)
             {
                 PhonebookModel pm = new PhonebookModel();
@@ -78,7 +79,7 @@ namespace TelephoneApp.Controllers
                 pm.user = user;
                 _applicationContext.PhonebookRecords.Add(pm);
                 _applicationContext.SaveChanges();
-                ViewData["Contact_Created"] = "New contact successfully added";
+                TempData["Contact_Created"] = "New contact successfully added";
                 return RedirectToAction("Index", "Home");
             }
             return View();
@@ -112,7 +113,7 @@ namespace TelephoneApp.Controllers
                 record.Address = phoneBook.Address;
                 _applicationContext.PhonebookRecords.Update(record);
                 _applicationContext.SaveChanges();
-                ViewData["Contact_Created"] = "Contact successfully updated!";
+                TempData["Contact_Created"] = "Contact successfully updated!";
 
                 return RedirectToAction("Index", "Home");
             }

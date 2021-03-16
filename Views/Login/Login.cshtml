@@ -8,6 +8,7 @@
 <div class="container">
     <h1>Login</h1>
     @Html.ValidationSummary()
+    @TempData["Message"]
     <form asp-action="Login" asp-controller="Login" method="post">
 
         <div class="logindiv">

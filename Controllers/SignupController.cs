@@ -58,18 +58,14 @@ namespace TelephoneApp.Controllers
                         PhoneNumber = request.PhoneNumber,
                         EmailConfirmed = true,
                         PhoneNumberConfirmed = true,
+                        UserType = "User"
                     };
                     var result = await _userManager.CreateAsync(user, request.Password);
-
-                    var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-                    var userId2 = _applicationContext.ApplicationUser.Find(userId);
-
-                    await _userManager.AddToRoleAsync(userId2, "User");
 
                     if (result.Succeeded)
                     {
                         TempData["Message"] = "Successfully Registration Done";
-                        return RedirectToAction("Register", "Signup");
+                        return RedirectToAction("Login", "Login");
                     }
                     else
                     {
