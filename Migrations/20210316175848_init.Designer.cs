@@ -10,7 +10,7 @@ using TelephoneApp.Data;
 namespace TelephoneApp.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20210316110723_init")]
+    [Migration("20210316175848_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -268,6 +268,9 @@ namespace TelephoneApp.Migrations
 
                     b.Property<string>("LastName")
                         .HasColumnType("varchar(100)");
+
+                    b.Property<string>("UserType")
+                        .HasColumnType("varchar(20)");
 
                     b.HasDiscriminator().HasValue("ApplicationUser");
                 });

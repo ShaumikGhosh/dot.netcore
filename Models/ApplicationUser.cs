@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace TelephoneApp.Data
+namespace TelephoneApp.Models
 {
     public class ApplicationUser : IdentityUser
     {

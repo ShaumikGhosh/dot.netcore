@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using TelephoneApp.Data;
 using TelephoneApp.Models;
 
 
@@ -15,14 +16,14 @@ namespace TelephoneApp.Controllers
     {
 
 
-        private readonly UserManager<IdentityUser> _userManager;
-        private readonly SignInManager<IdentityUser> _signInManager;
+        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly SignInManager<ApplicationUser> _signInManager;
 
 
 
 
-        public LoginController(UserManager<IdentityUser> userManager,
-            SignInManager<IdentityUser> signInManager)
+        public LoginController(UserManager<ApplicationUser> userManager,
+            SignInManager<ApplicationUser> signInManager)
         {
 
             _userManager = userManager;

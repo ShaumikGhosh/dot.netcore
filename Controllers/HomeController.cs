@@ -21,13 +21,13 @@ namespace TelephoneApp.Controllers
 
         private readonly ILogger<HomeController> _logger;
         private readonly ApplicationContext _applicationContext;
-        private readonly UserManager<IdentityUser> _userManager;
+        private readonly UserManager<ApplicationUser> _userManager;
 
 
 
 
         public HomeController(ILogger<HomeController> logger,
-            ApplicationContext applicationContext, UserManager<IdentityUser> userManager)
+            ApplicationContext applicationContext, UserManager<ApplicationUser> userManager)
         {
             _logger = logger;
             _applicationContext = applicationContext;
