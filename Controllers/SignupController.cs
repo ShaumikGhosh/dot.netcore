@@ -18,13 +18,22 @@ namespace TelephoneApp.Controllers
 
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly ApplicationContext _applicationContext;
+        private readonly RoleManager<IdentityRole> _roleManager;
+        private readonly SignInManager<ApplicationUser> _signinManager;
 
 
 
-        public SignupController(UserManager<ApplicationUser> userManager, ApplicationContext context)
+        public SignupController(
+            UserManager<ApplicationUser> userManager,
+            ApplicationContext context,
+            RoleManager<IdentityRole> roleManager,
+            SignInManager<ApplicationUser> signInManager
+        )
         {
+            _roleManager = roleManager;
             _userManager = userManager;
             _applicationContext = context;
+            _signinManager = signInManager;
         }
 
 
@@ -60,12 +69,14 @@ namespace TelephoneApp.Controllers
                         PhoneNumber = request.PhoneNumber,
                         EmailConfirmed = true,
                         PhoneNumberConfirmed = true,
-                        UserType = "User"
                     };
+
                     var result = await _userManager.CreateAsync(user, request.Password);
 
                     if (result.Succeeded)
                     {
+                        await _userManager.AddToRoleAsync(user, "Admin");
+
                         TempData["Message"] = "Successfully Registration Done";
                         return RedirectToAction("Login", "Login");
                     }

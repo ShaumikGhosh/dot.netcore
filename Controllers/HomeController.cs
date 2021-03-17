@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
@@ -35,7 +36,7 @@ namespace TelephoneApp.Controllers
 
 
 
-
+        [Authorize(Roles = "User")]
         public async Task<IActionResult> Index()
         {
             var user = await _userManager.GetUserAsync(User);
@@ -51,7 +52,7 @@ namespace TelephoneApp.Controllers
 
 
 
-
+        [Authorize(Roles = "User")]
         [HttpGet, Route("user/add")]
         public IActionResult AddContact()
         {
@@ -60,7 +61,7 @@ namespace TelephoneApp.Controllers
 
 
 
-
+        [Authorize(Roles = "User")]
         [HttpPost, Route("user/add")]
         [ValidateAntiForgeryToken]
         public IActionResult AddContact([Bind("FullName", "PhoneNumber", "Address", "Approved", "user")]  PhonebookModel phonebookModel)
@@ -87,7 +88,7 @@ namespace TelephoneApp.Controllers
 
 
 
-
+        [Authorize(Roles = "User")]
         [HttpGet]
         [Route("contact/edit/{id}")]
         public IActionResult Edit (int id)
@@ -98,7 +99,7 @@ namespace TelephoneApp.Controllers
 
 
 
-
+        [Authorize(Roles = "User")]
         [HttpPost]
         [Route("contact/edit/{id}")]
         public IActionResult Edit(PhonebookModel phoneBook, int id)
@@ -121,7 +122,7 @@ namespace TelephoneApp.Controllers
 
 
 
-
+        [Authorize(Roles = "User")]
         [HttpGet]
         [Route("contact/delete/{id}")]
         public IActionResult Delete(int id)
@@ -134,8 +135,7 @@ namespace TelephoneApp.Controllers
         }
 
 
-
-
+        [Authorize(Roles = "User")]
         [HttpGet, Route("user/privacy")]
         public IActionResult Privacy()
         {

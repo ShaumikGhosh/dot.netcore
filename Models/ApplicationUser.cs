@@ -15,8 +15,5 @@ namespace TelephoneApp.Models
 
         [PersonalData, Column(TypeName = "varchar(100)")]
         public string LastName { get; set; }
-
-        [PersonalData, Column(TypeName = "varchar(20)")]
-        public string UserType { get; set; }
     }
 }

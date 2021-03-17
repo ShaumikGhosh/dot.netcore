@@ -440,3 +440,5 @@ G:\c_sharp\TelephoneApp\obj\Debug\net5.0\Razor\Views\Login\Login.cshtml.g.cs
 G:\c_sharp\TelephoneApp\obj\Debug\net5.0\Razor\Views\Home\AddContact.cshtml.g.cs
 G:\c_sharp\TelephoneApp\obj\Debug\net5.0\Razor\Views\Home\Edit.cshtml.g.cs
 G:\c_sharp\TelephoneApp\obj\Debug\net5.0\Razor\Views\Dashboard\Dashboard.cshtml.g.cs
+G:\c_sharp\TelephoneApp\obj\Debug\net5.0\Razor\Views\Role\Index.cshtml.g.cs
+G:\c_sharp\TelephoneApp\obj\Debug\net5.0\Razor\Views\Role\Create.cshtml.g.cs

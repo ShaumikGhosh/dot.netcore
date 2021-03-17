@@ -10,7 +10,7 @@ using TelephoneApp.Data;
 namespace TelephoneApp.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20210316175848_init")]
+    [Migration("20210317143148_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -259,7 +259,7 @@ namespace TelephoneApp.Migrations
                     b.ToTable("PhonebookRecords");
                 });
 
-            modelBuilder.Entity("TelephoneApp.Data.ApplicationUser", b =>
+            modelBuilder.Entity("TelephoneApp.Models.ApplicationUser", b =>
                 {
                     b.HasBaseType("Microsoft.AspNetCore.Identity.IdentityUser");
 
@@ -268,9 +268,6 @@ namespace TelephoneApp.Migrations
 
                     b.Property<string>("LastName")
                         .HasColumnType("varchar(100)");
-
-                    b.Property<string>("UserType")
-                        .HasColumnType("varchar(20)");
 
                     b.HasDiscriminator().HasValue("ApplicationUser");
                 });
@@ -328,7 +325,7 @@ namespace TelephoneApp.Migrations
 
             modelBuilder.Entity("TelephoneApp.Models.PhonebookModel", b =>
                 {
-                    b.HasOne("TelephoneApp.Data.ApplicationUser", "user")
+                    b.HasOne("TelephoneApp.Models.ApplicationUser", "user")
                         .WithMany()
                         .HasForeignKey("userId");
 

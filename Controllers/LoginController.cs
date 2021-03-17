@@ -70,11 +70,22 @@ namespace TelephoneApp.Controllers
 
                 }
 
-                var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, true);
+                var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, false);
 
                 if (result.Succeeded)
                 {
-                    return RedirectToAction("Index", "Home");
+                    var roles = await _userManager.GetRolesAsync(user);
+
+                    if (roles.Contains("User"))
+                    {
+                        return RedirectToAction("Index", "Home");
+                    }
+
+                    else if (roles.Contains("Admin"))
+                    {
+                        return RedirectToAction("Dashboard", "Dashboard");
+                    }
+                    
                 }
                 else if (result.IsLockedOut)
                 {
