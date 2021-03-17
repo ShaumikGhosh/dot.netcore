@@ -19,6 +19,8 @@ namespace TelephoneApp.Controllers
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly ApplicationContext _applicationContext;
 
+
+
         public SignupController(UserManager<ApplicationUser> userManager, ApplicationContext context)
         {
             _userManager = userManager;

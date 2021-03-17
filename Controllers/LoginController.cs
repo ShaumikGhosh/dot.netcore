@@ -74,7 +74,6 @@ namespace TelephoneApp.Controllers
 
                 if (result.Succeeded)
                 {
-                    await _userManager.AddClaimAsync(user, new Claim("UserRole", "Admin"));
                     return RedirectToAction("Index", "Home");
                 }
                 else if (result.IsLockedOut)

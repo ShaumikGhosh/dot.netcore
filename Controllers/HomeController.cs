@@ -38,8 +38,7 @@ namespace TelephoneApp.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            var user = _applicationContext.ApplicationUser.Find(userId);
+            var user = await _userManager.GetUserAsync(User);
 
             if (user != null)
             {
