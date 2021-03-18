@@ -75,7 +75,7 @@ namespace TelephoneApp.Controllers
 
                     if (result.Succeeded)
                     {
-                        await _userManager.AddToRoleAsync(user, "Admin");
+                        await _userManager.AddToRoleAsync(user, "User");
 
                         TempData["Message"] = "Successfully Registration Done";
                         return RedirectToAction("Login", "Login");

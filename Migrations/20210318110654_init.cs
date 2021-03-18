@@ -26,7 +26,6 @@ namespace TelephoneApp.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    Discriminator = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     FirstName = table.Column<string>(type: "varchar(100)", nullable: true),
                     LastName = table.Column<string>(type: "varchar(100)", nullable: true),
                     UserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
@@ -177,6 +176,26 @@ namespace TelephoneApp.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
+
+            migrationBuilder.InsertData(
+                table: "AspNetRoles",
+                columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
+                values: new object[] { "a18be9c0-aa65-4af8-bd17-00bd9450e900", "0422b5c0-f366-40bc-99b5-c074b8754004", "Admin", "ADMIN" });
+
+            migrationBuilder.InsertData(
+                table: "AspNetRoles",
+                columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
+                values: new object[] { "ea4a4210-8cad-4461-8865-a79a260f81bc", "bd2dfc6b-27ad-4136-b7df-3926df8b3974", "User", "USER" });
+
+            migrationBuilder.InsertData(
+                table: "AspNetUsers",
+                columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "FirstName", "LastName", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
+                values: new object[] { "a18be9c0-aa65-4af8-bd17-00bd9450e575", 0, "4c2206ea-3eeb-41bc-a752-e35c4c7641bf", "admin@dotnet.project", true, "Super", "User", false, null, "ADMIN@DOTNET.PROJECT", "ADMIN@DOTNET.PROJECT", "AQAAAAEAACcQAAAAEBYsr2RZwHQHm/EQhhJ65jYMr8fimsffcnwsIAy/yneaxZd3Tg9YPOrwop/3TyaPIA==", "01685987563", true, "168800ea-222e-4d64-aa0c-a2013d2cfa44", false, "admin@dotnet.project" });
+
+            migrationBuilder.InsertData(
+                table: "AspNetUserRoles",
+                columns: new[] { "RoleId", "UserId" },
+                values: new object[] { "a18be9c0-aa65-4af8-bd17-00bd9450e900", "a18be9c0-aa65-4af8-bd17-00bd9450e575" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",

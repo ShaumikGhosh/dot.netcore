@@ -74,18 +74,18 @@ namespace TelephoneApp.Controllers
 
                 if (result.Succeeded)
                 {
+                    HttpContext.Response.Cookies.Append("logedin", "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789");
                     var roles = await _userManager.GetRolesAsync(user);
 
                     if (roles.Contains("User"))
                     {
                         return RedirectToAction("Index", "Home");
                     }
-
                     else if (roles.Contains("Admin"))
                     {
                         return RedirectToAction("Dashboard", "Dashboard");
                     }
-                    
+
                 }
                 else if (result.IsLockedOut)
                 {

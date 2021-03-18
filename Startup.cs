@@ -15,6 +15,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using TelephoneApp.Data;
+using TelephoneApp.Middleware;
 using TelephoneApp.Models;
 
 namespace TelephoneApp
@@ -45,7 +46,7 @@ namespace TelephoneApp
 
             services.ConfigureApplicationCookie(options =>
             {
-                options.LoginPath = $"/user/login";
+                options.LoginPath = "/user/login";
             });
         }
 
@@ -59,17 +60,20 @@ namespace TelephoneApp
             }
             else
             {
-                app.UseExceptionHandler("/Home/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+                app.UseExceptionHandler("/home/error");
                 app.UseHsts();
             }
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
             app.UseRouting();
 
+
             app.UseAuthentication();
             app.UseAuthorization();
+
+            app.UseMiddleware<FilterMiddleware>();
 
             app.UseEndpoints(endpoints =>
             {

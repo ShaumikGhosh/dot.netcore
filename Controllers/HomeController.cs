@@ -135,7 +135,7 @@ namespace TelephoneApp.Controllers
         }
 
 
-        [Authorize(Roles = "User")]
+        [Authorize(Roles = "User, Admin")]
         [HttpGet, Route("user/privacy")]
         public IActionResult Privacy()
         {
