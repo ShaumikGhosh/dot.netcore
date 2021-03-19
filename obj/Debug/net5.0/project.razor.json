@@ -15618,6 +15618,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "g:\\c_sharp\\TelephoneApp\\Views\\Home\\AddContact.cshtml",
+      "TargetPath": "Views\\Home\\AddContact.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "g:\\c_sharp\\TelephoneApp\\Views\\Home\\Privacy.cshtml",
       "TargetPath": "Views\\Home\\Privacy.cshtml",
       "FileKind": "mvc"
@@ -15633,13 +15638,38 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "g:\\c_sharp\\TelephoneApp\\Views\\Error\\Error.cshtml",
+      "TargetPath": "Views\\Error\\Error.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "g:\\c_sharp\\TelephoneApp\\Views\\Login\\Login.cshtml",
       "TargetPath": "Views\\Login\\Login.cshtml",
       "FileKind": "mvc"
     },
     {
+      "FilePath": "g:\\c_sharp\\TelephoneApp\\Views\\Role\\Create.cshtml",
+      "TargetPath": "Views\\Role\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "g:\\c_sharp\\TelephoneApp\\Views\\Dashboard\\Dashboard.cshtml",
+      "TargetPath": "Views\\Dashboard\\Dashboard.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "g:\\c_sharp\\TelephoneApp\\Views\\Role\\Index.cshtml",
+      "TargetPath": "Views\\Role\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "g:\\c_sharp\\TelephoneApp\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "g:\\c_sharp\\TelephoneApp\\Views\\Home\\Edit.cshtml",
+      "TargetPath": "Views\\Home\\Edit.cshtml",
       "FileKind": "mvc"
     },
     {

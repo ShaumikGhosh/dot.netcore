@@ -10,8 +10,8 @@ using TelephoneApp.Data;
 namespace TelephoneApp.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20210318110654_init")]
-    partial class init
+    [Migration("20210319183923_Init")]
+    partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -51,14 +51,14 @@ namespace TelephoneApp.Migrations
                         new
                         {
                             Id = "a18be9c0-aa65-4af8-bd17-00bd9450e900",
-                            ConcurrencyStamp = "0422b5c0-f366-40bc-99b5-c074b8754004",
+                            ConcurrencyStamp = "7bb5317e-0086-4053-bbdb-57fd2f5b7b89",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "ea4a4210-8cad-4461-8865-a79a260f81bc",
-                            ConcurrencyStamp = "bd2dfc6b-27ad-4136-b7df-3926df8b3974",
+                            Id = "f78dafc9-d91b-4900-9893-ba238f75d4dc",
+                            ConcurrencyStamp = "319f2db3-193b-4e05-a26b-1b03e2ff7678",
                             Name = "User",
                             NormalizedName = "USER"
                         });
@@ -254,7 +254,7 @@ namespace TelephoneApp.Migrations
                         {
                             Id = "a18be9c0-aa65-4af8-bd17-00bd9450e575",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "4c2206ea-3eeb-41bc-a752-e35c4c7641bf",
+                            ConcurrencyStamp = "04aee632-1de8-4bc3-8651-fad805176824",
                             Email = "admin@dotnet.project",
                             EmailConfirmed = true,
                             FirstName = "Super",
@@ -262,10 +262,10 @@ namespace TelephoneApp.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@DOTNET.PROJECT",
                             NormalizedUserName = "ADMIN@DOTNET.PROJECT",
-                            PasswordHash = "AQAAAAEAACcQAAAAEBYsr2RZwHQHm/EQhhJ65jYMr8fimsffcnwsIAy/yneaxZd3Tg9YPOrwop/3TyaPIA==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEBicdt/qN5DEGbcNRLZxaJMcPKVj2trrncJsrZaS9QFtcxhdn5SUGvLEyv4omq6RYQ==",
                             PhoneNumber = "01685987563",
                             PhoneNumberConfirmed = true,
-                            SecurityStamp = "168800ea-222e-4d64-aa0c-a2013d2cfa44",
+                            SecurityStamp = "17b0243c-8ba8-4326-8de0-ee1a68a1eaad",
                             TwoFactorEnabled = false,
                             UserName = "admin@dotnet.project"
                         });

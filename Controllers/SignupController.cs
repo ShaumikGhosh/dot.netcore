@@ -56,6 +56,7 @@ namespace TelephoneApp.Controllers
         {
             if (ModelState.IsValid)
             {
+
                 var userCheck = await _userManager.FindByEmailAsync(request.Email);
                 if (userCheck == null)
                 {

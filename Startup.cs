@@ -15,8 +15,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using TelephoneApp.Data;
+using TelephoneApp.Interfaces;
 using TelephoneApp.Middleware;
 using TelephoneApp.Models;
+using TelephoneApp.Services;
 
 namespace TelephoneApp
 {
@@ -43,6 +45,8 @@ namespace TelephoneApp
 
             services.AddControllersWithViews();
             services.AddRazorPages();
+
+            services.AddTransient<IFContacts, ContactServices>();
 
             services.ConfigureApplicationCookie(options =>
             {
