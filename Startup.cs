@@ -87,7 +87,7 @@ namespace TelephoneApp
             app.UseAuthentication();
             app.UseAuthorization();
 
-            app.UseMiddleware<FilterMiddleware>();
+            //app.UseMiddleware<FilterMiddleware>();
 
             app.UseEndpoints(endpoints =>
             {

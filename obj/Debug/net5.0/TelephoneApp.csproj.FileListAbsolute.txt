@@ -439,11 +439,11 @@ G:\c_sharp\TelephoneApp\obj\Debug\net5.0\Razor\Views\Signup\Register.cshtml.g.cs
 G:\c_sharp\TelephoneApp\obj\Debug\net5.0\Razor\Views\Login\Login.cshtml.g.cs
 G:\c_sharp\TelephoneApp\obj\Debug\net5.0\Razor\Views\Home\AddContact.cshtml.g.cs
 G:\c_sharp\TelephoneApp\obj\Debug\net5.0\Razor\Views\Home\Edit.cshtml.g.cs
-G:\c_sharp\TelephoneApp\obj\Debug\net5.0\Razor\Views\Dashboard\Dashboard.cshtml.g.cs
 G:\c_sharp\TelephoneApp\obj\Debug\net5.0\Razor\Views\Role\Index.cshtml.g.cs
 G:\c_sharp\TelephoneApp\obj\Debug\net5.0\Razor\Views\Role\Create.cshtml.g.cs
 G:\c_sharp\TelephoneApp\obj\Debug\net5.0\Razor\Views\Error\Error.cshtml.g.cs
-G:\c_sharp\TelephoneApp\obj\Debug\net5.0\Razor\Views\Shared\_Admin.cshtml.g.cs
-G:\c_sharp\TelephoneApp\obj\Debug\net5.0\Razor\Views\Shared\_Header.cshtml.g.cs
-G:\c_sharp\TelephoneApp\obj\Debug\net5.0\Razor\Views\Shared\_Footer.cshtml.g.cs
-G:\c_sharp\TelephoneApp\obj\Debug\net5.0\Razor\Views\Shared\_Sidebar.cshtml.g.cs
+G:\c_sharp\TelephoneApp\obj\Debug\net5.0\Razor\Views\Admin\_Admin.cshtml.g.cs
+G:\c_sharp\TelephoneApp\obj\Debug\net5.0\Razor\Views\Admin\Includes\_Footer.cshtml.g.cs
+G:\c_sharp\TelephoneApp\obj\Debug\net5.0\Razor\Views\Admin\Includes\_Header.cshtml.g.cs
+G:\c_sharp\TelephoneApp\obj\Debug\net5.0\Razor\Views\Admin\Includes\_Sidebar.cshtml.g.cs
+G:\c_sharp\TelephoneApp\obj\Debug\net5.0\Razor\Views\Dashboard\Dashboard.cshtml.g.cs

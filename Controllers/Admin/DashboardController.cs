@@ -17,11 +17,7 @@ namespace TelephoneApp.Controllers.Admin
         private readonly UserManager<ApplicationUser> _userManager;
 
 
-
-
-        public DashboardController(
-            ILogger<DashboardController> logger,
-            UserManager<ApplicationUser> userManager)
+        public DashboardController(UserManager<ApplicationUser> userManager)
         {
             _userManager = userManager;
         }
