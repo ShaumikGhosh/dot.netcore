@@ -8,7 +8,10 @@ using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using TelephoneApp.Data;
+using TelephoneApp.Interfaces;
 using TelephoneApp.Models;
+using TelephoneApp.Services;
+
 
 namespace TelephoneApp.Controllers
 {
@@ -17,23 +20,13 @@ namespace TelephoneApp.Controllers
 
 
         private readonly UserManager<ApplicationUser> _userManager;
-        private readonly ApplicationContext _applicationContext;
-        private readonly RoleManager<IdentityRole> _roleManager;
-        private readonly SignInManager<ApplicationUser> _signinManager;
 
 
 
-        public SignupController(
-            UserManager<ApplicationUser> userManager,
-            ApplicationContext context,
-            RoleManager<IdentityRole> roleManager,
-            SignInManager<ApplicationUser> signInManager
-        )
+
+        public SignupController(UserManager<ApplicationUser> userManager)
         {
-            _roleManager = roleManager;
             _userManager = userManager;
-            _applicationContext = context;
-            _signinManager = signInManager;
         }
 
 
@@ -41,7 +34,7 @@ namespace TelephoneApp.Controllers
         [HttpGet, AllowAnonymous, Route("user/signup")]
         public IActionResult Register()
         {
-            SignupModel model = new SignupModel();
+            var model = new SignupModel();
             return View(model);
         }
 
@@ -57,21 +50,22 @@ namespace TelephoneApp.Controllers
             if (ModelState.IsValid)
             {
 
+                var user = new ApplicationUser
+                {
+                    FirstName = request.FirstName,
+                    LastName = request.LastName,
+                    UserName = request.Email,
+                    NormalizedUserName = request.Email,
+                    Email = request.Email,
+                    PhoneNumber = request.PhoneNumber,
+                    EmailConfirmed = true,
+                    PhoneNumberConfirmed = true,
+                };
+
                 var userCheck = await _userManager.FindByEmailAsync(request.Email);
+
                 if (userCheck == null)
                 {
-                    var user = new ApplicationUser
-                    {
-                        FirstName = request.FirstName,
-                        LastName = request.LastName,
-                        UserName = request.Email,
-                        NormalizedUserName = request.Email,
-                        Email = request.Email,
-                        PhoneNumber = request.PhoneNumber,
-                        EmailConfirmed = true,
-                        PhoneNumberConfirmed = true,
-                    };
-
                     var result = await _userManager.CreateAsync(user, request.Password);
 
                     if (result.Succeeded)
@@ -99,6 +93,7 @@ namespace TelephoneApp.Controllers
                     return View(request);
                 }
             }
+
             return View(request);
         }
 

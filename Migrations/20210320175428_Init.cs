@@ -180,17 +180,17 @@ namespace TelephoneApp.Migrations
             migrationBuilder.InsertData(
                 table: "AspNetRoles",
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
-                values: new object[] { "a18be9c0-aa65-4af8-bd17-00bd9450e900", "7bb5317e-0086-4053-bbdb-57fd2f5b7b89", "Admin", "ADMIN" });
+                values: new object[] { "a18be9c0-aa65-4af8-bd17-00bd9450e900", "0248baca-1b71-4534-bbd6-2c9f6e2fe4b0", "Admin", "ADMIN" });
 
             migrationBuilder.InsertData(
                 table: "AspNetRoles",
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
-                values: new object[] { "f78dafc9-d91b-4900-9893-ba238f75d4dc", "319f2db3-193b-4e05-a26b-1b03e2ff7678", "User", "USER" });
+                values: new object[] { "c0c8ba27-7986-455c-957f-cbe146064d0f", "46525a4a-44bc-41ff-ad17-21a6544a55c8", "User", "USER" });
 
             migrationBuilder.InsertData(
                 table: "AspNetUsers",
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "FirstName", "LastName", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
-                values: new object[] { "a18be9c0-aa65-4af8-bd17-00bd9450e575", 0, "04aee632-1de8-4bc3-8651-fad805176824", "admin@dotnet.project", true, "Super", "User", false, null, "ADMIN@DOTNET.PROJECT", "ADMIN@DOTNET.PROJECT", "AQAAAAEAACcQAAAAEBicdt/qN5DEGbcNRLZxaJMcPKVj2trrncJsrZaS9QFtcxhdn5SUGvLEyv4omq6RYQ==", "01685987563", true, "17b0243c-8ba8-4326-8de0-ee1a68a1eaad", false, "admin@dotnet.project" });
+                values: new object[] { "a18be9c0-aa65-4af8-bd17-00bd9450e575", 0, "3fd5795b-9716-4991-bf87-91ccf10d2024", "admin@dotnet.project", true, "Super", "User", false, null, "ADMIN@DOTNET.PROJECT", "ADMIN@DOTNET.PROJECT", "AQAAAAEAACcQAAAAEJrhZpCq2CWlhjUTC3DRgAuFmX+4ck5ni5fYRPllrvJNjaEBwSJLEHm6P+lJcK3Iog==", "01685987563", true, "1e3d6944-60b7-4e23-add9-3f3f47f86a22", false, "admin@dotnet.project" });
 
             migrationBuilder.InsertData(
                 table: "AspNetUserRoles",

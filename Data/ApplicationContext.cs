@@ -46,7 +46,7 @@ namespace TelephoneApp.Data
                     PhoneNumber = "01685987563",
                     EmailConfirmed = true,
                     PhoneNumberConfirmed = true,
-                    PasswordHash = hasher.HashPassword(null, "Admin123."),
+                    PasswordHash = hasher.HashPassword(null, "admin123"),
                 }
             ); ;
 

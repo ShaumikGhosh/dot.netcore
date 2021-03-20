@@ -4,11 +4,19 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<style>
+    .success {
+        background-color: lightgreen;
+        width: 800px;
+        padding: 5px;
+        color: blue;
+    }
+</style>
 
 <div class="container">
     <h1>Login</h1>
     @Html.ValidationSummary()
-    @TempData["Message"]
+    <div class="successs">@TempData["Message"]</div>
     <form asp-action="Login" asp-controller="Login" method="post">
 
         <div class="logindiv">

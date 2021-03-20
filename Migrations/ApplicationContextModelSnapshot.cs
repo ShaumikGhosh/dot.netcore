@@ -49,14 +49,14 @@ namespace TelephoneApp.Migrations
                         new
                         {
                             Id = "a18be9c0-aa65-4af8-bd17-00bd9450e900",
-                            ConcurrencyStamp = "7bb5317e-0086-4053-bbdb-57fd2f5b7b89",
+                            ConcurrencyStamp = "0248baca-1b71-4534-bbd6-2c9f6e2fe4b0",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "f78dafc9-d91b-4900-9893-ba238f75d4dc",
-                            ConcurrencyStamp = "319f2db3-193b-4e05-a26b-1b03e2ff7678",
+                            Id = "c0c8ba27-7986-455c-957f-cbe146064d0f",
+                            ConcurrencyStamp = "46525a4a-44bc-41ff-ad17-21a6544a55c8",
                             Name = "User",
                             NormalizedName = "USER"
                         });
@@ -252,7 +252,7 @@ namespace TelephoneApp.Migrations
                         {
                             Id = "a18be9c0-aa65-4af8-bd17-00bd9450e575",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "04aee632-1de8-4bc3-8651-fad805176824",
+                            ConcurrencyStamp = "3fd5795b-9716-4991-bf87-91ccf10d2024",
                             Email = "admin@dotnet.project",
                             EmailConfirmed = true,
                             FirstName = "Super",
@@ -260,10 +260,10 @@ namespace TelephoneApp.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@DOTNET.PROJECT",
                             NormalizedUserName = "ADMIN@DOTNET.PROJECT",
-                            PasswordHash = "AQAAAAEAACcQAAAAEBicdt/qN5DEGbcNRLZxaJMcPKVj2trrncJsrZaS9QFtcxhdn5SUGvLEyv4omq6RYQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEJrhZpCq2CWlhjUTC3DRgAuFmX+4ck5ni5fYRPllrvJNjaEBwSJLEHm6P+lJcK3Iog==",
                             PhoneNumber = "01685987563",
                             PhoneNumberConfirmed = true,
-                            SecurityStamp = "17b0243c-8ba8-4326-8de0-ee1a68a1eaad",
+                            SecurityStamp = "1e3d6944-60b7-4e23-add9-3f3f47f86a22",
                             TwoFactorEnabled = false,
                             UserName = "admin@dotnet.project"
                         });

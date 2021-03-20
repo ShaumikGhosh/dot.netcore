@@ -20,6 +20,7 @@ using TelephoneApp.Middleware;
 using TelephoneApp.Models;
 using TelephoneApp.Services;
 
+
 namespace TelephoneApp
 {
     public class Startup
@@ -39,14 +40,23 @@ namespace TelephoneApp
                     Configuration.GetConnectionString("SqlConnection")));
             services.AddDatabaseDeveloperPageExceptionFilter();
 
-            services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
+            services.AddDefaultIdentity<ApplicationUser>(options => {
+                options.SignIn.RequireConfirmedAccount = true;
+                options.Password.RequiredLength = 4;
+                options.Password.RequireLowercase = false;
+                options.Password.RequireUppercase = false;
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequireDigit = false;
+            })
                 .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationContext>();
 
             services.AddControllersWithViews();
             services.AddRazorPages();
 
+
             services.AddTransient<IFContacts, ContactServices>();
+
 
             services.ConfigureApplicationCookie(options =>
             {
