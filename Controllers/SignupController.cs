@@ -77,7 +77,7 @@ namespace TelephoneApp.Controllers
                     }
                     else
                     {
-                        if (result.Errors.Count() > 0)
+                        if (result.Errors.Any())
                         {
                             foreach (var error in result.Errors)
                             {
