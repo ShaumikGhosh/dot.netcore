@@ -7,22 +7,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using TelephoneApp.Models;
 
+
 namespace TelephoneApp.Middleware
 {
     // You may need to install the Microsoft.AspNetCore.Http.Abstractions package into your project
     public class FilterMiddleware
     {
         private readonly RequestDelegate _next;
-        private readonly UserManager<ApplicationUser> _userManager;
-        private readonly SignInManager<ApplicationUser> _signInManager;
-
-        public FilterMiddleware(UserManager<ApplicationUser> userManager,
-            SignInManager<ApplicationUser> signInManager)
-        {
-
-            _userManager = userManager;
-            _signInManager = signInManager;
-        }
 
         public FilterMiddleware(RequestDelegate next)
         {
@@ -31,7 +22,7 @@ namespace TelephoneApp.Middleware
 
         public Task Invoke(HttpContext httpContext)
         {
-            if (httpContext.Request.QueryString.ToString().Contains("ReturnUrl"))
+            if (httpContext.Request.Query.ContainsKey("ReturnUrl") == true)
             {
                 httpContext.Response.Redirect("/user/login");
             }
@@ -51,10 +42,6 @@ namespace TelephoneApp.Middleware
                
             }
 
-            if (httpContext.Request.Path.ToString().Contains("/Identity/") || httpContext.Request.Path.ToString().Contains("/identity/"))
-            {
-                httpContext.Response.Redirect("/home/error");
-            }
             return _next(httpContext);
         }
     }

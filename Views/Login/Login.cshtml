@@ -17,8 +17,8 @@
     <h1>Login</h1>
     @Html.ValidationSummary()
     <div class="successs">@TempData["Message"]</div>
-    <form asp-action="Login" asp-controller="Login" method="post">
-
+    <form asp-action="Login" asp-controller="Login" method="post" asp-route-returnUrl="@Url.Action("Login", "Login")">
+        @ViewBag.Url
         <div class="logindiv">
 
             <div class="form-group col-sm-12">

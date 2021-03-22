@@ -39,7 +39,7 @@ namespace TelephoneApp.Controllers
         [Route("user/login")]
         public IActionResult Login()
         {
-            LoginModel model = new LoginModel();
+            var model = new LoginModel();
             return View(model);
         }
 
